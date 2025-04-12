@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@keyframes slideFromRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideFromLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @layer utilities {
+    .animate-slide-from-right {
+      animation: slideFromRight 0.3s ease-in-out forwards;
+    }
+    
+    .animate-slide-from-left {
+      animation: slideFromLeft 0.3s ease-in-out forwards;
+    }
+  }
